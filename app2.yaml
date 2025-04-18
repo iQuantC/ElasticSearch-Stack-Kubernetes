@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app2
+  namespace: demo-apps
+  labels:
+    app: app2
+spec:
+  containers:
+    - name: app2
+      image: busybox
+      command: ["sh", "-c", "while true; do echo Hello from App2; sleep 5; done"]
